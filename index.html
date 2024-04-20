@@ -1,0 +1,41 @@
+<html>
+    <style>
+        .counterBtn {
+            background-color: greenyellow;
+        }
+        #inc-btn{
+            color: blue;
+        }
+        #dec-btn{
+            color: red;
+        }
+    </style>
+    <body>
+        <div style="width: 300px; margin: 0 auto;">
+            <h1 style="text-align: center;">
+                Counter App
+            </h1>
+            <div style="padding: 8px; border: 1px solid #ccc; margin: 10px; display: flex; justify-content: center;gap: 8px;">
+                <button id="inc-btn" class="counterBtn"> +</button>
+                <div id="counter" style="background-color: pink; padding: 8px;"> 0 </div>
+                <button id="dec-btn" class="counterBtn"> -</button>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button id="reset-btn" class="counterBtn"> reset</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.getElementById("inc-btn").onclick = () => {
+            const counter = document.getElementById("counter").innerText
+            document.getElementById("counter").innerText = Number(counter) + 1
+        }
+        document.getElementById("dec-btn").onclick = () => {
+            const counter = document.getElementById("counter").innerText
+            document.getElementById("counter").innerText = Number(counter) - 1
+        }
+        document.getElementById("reset-btn").onclick = () => {
+            document.getElementById("counter").innerText = 0
+        }
+    </script>
+    </html>
